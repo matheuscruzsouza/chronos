@@ -1,0 +1,114 @@
+{
+	"info": {
+		"name": "Chronos",
+		"_postman_id": "26bbd712-514d-4b3a-9d35-0e11372c6b46",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getPessoas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/pessoa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoa"
+					]
+				},
+				"description": "retorna todas as pessoas"
+			},
+			"response": []
+		},
+		{
+			"name": "postPessoa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Ricardo\",\n\t\"cpf\": \"1111111111\",\n\t\"datanascimento\": \"1984-10-10\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/pessoa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pessoa"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "postProjeto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"nome\": \"chronos\",\n\"pessoa\": {\n    \"oid\": \"ff8081817475605b01747564057d0000\",\n    \"nome\": \"Ricardo\",\n    \"datanascimento\": \"1984-10-10\",\n    \"cpf\": \"1111111111\"\n}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/projeto",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projeto"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getProjeto",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"nome\": \"chronos\",\n\"pessoa\": {\n    \"oid\": \"ff8081817475605b01747564057d0000\",\n    \"nome\": \"Ricardo\",\n    \"datanascimento\": \"1984-10-10\",\n    \"cpf\": \"1111111111\"\n}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/projeto",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projeto"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
